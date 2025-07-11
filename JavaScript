@@ -1,0 +1,414 @@
+
+// IP Adresse
+const IP = 'RemoteIP';
+// Bearer Token
+const Bearer = 'Bearer Token';
+// Aktualisieren aller "x"  Millisekunden (5 Sekunden)
+const repeat = 5000
+
+
+
+
+//Datenpunkte erstellen
+createState("javascript.0.Unfolded-Circle.Information.model", '?', {
+    name: 'model',
+    desc: 'model',
+    type: 'string',
+    role: 'state',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Information.device_name", '?', {
+    name: 'device_name',
+    desc: 'device_name',
+    type: 'string',
+    role: 'state',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Information.hostname", '?', {
+    name: 'hostname',
+    desc: 'hostname',
+    type: 'string',
+    role: 'state',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Information.address", '?', {
+    name: 'address',
+    desc: 'address',
+    type: 'string',
+    role: 'state',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Information.api", '?', {
+    name: 'api',
+    desc: 'api_version',
+    type: 'string',
+    role: 'state',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Information.core", '?', {
+    name: 'core',
+    desc: 'core_version',
+    type: 'string',
+    role: 'state',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Information.ui", '?', {
+    name: 'ui',
+    desc: 'ui_version',
+    type: 'string',
+    role: 'state',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Information.os", '?', {
+    name: 'os',
+    desc: 'os_version',
+    type: 'string',
+    role: 'state',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Information.serial_number", '?', {
+    name: 'serial_number',
+    desc: 'serial_number',
+    type: 'string',
+    role: 'string',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Information.hw_revision", '?', {
+    name: 'hw_revision',
+    desc: 'hw_revision',
+    type: 'string',
+    role: 'state',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Information.manufacturing_date", '?', {
+    name: 'manufacturing_date',
+    desc: 'manufacturing_date',
+    type: 'string',
+    role: 'string',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Memory.total_memory", '?', {
+    name: 'total_memory',
+    desc: 'total_memory',
+    type: 'number',
+    role: 'number',
+    unit: 'MB',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Memory.available_memory", '?', {
+    name: 'available_memory',
+    desc: 'available_memory',
+    type: 'number',
+    role: 'number',
+    unit: 'MB',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Memory.used_memory", '?', {
+    name: 'used_memory',
+    desc: 'used_memory',
+    type: 'number',
+    role: 'number',
+    unit: 'MB',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Memory.total_swap", '?', {
+    name: 'total_swap',
+    desc: 'total_swap',
+    type: 'number',
+    role: 'number',
+    unit: 'MB',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.Memory.used_swap", '?', {
+    name: 'used_swap',
+    desc: 'used_swap',
+    type: 'number',
+    role: 'number',
+    unit: 'MB',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.load_avg.one", '?', {
+    name: 'one',
+    desc: 'one',
+    type: 'number',
+    role: 'number',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.load_avg.five", '?', {
+    name: 'five',
+    desc: 'five',
+    type: 'number',
+    role: 'number',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.load_avg.fifteen", '?', {
+    name: 'fifteen',
+    desc: 'fifteen',
+    type: 'number',
+    role: 'number',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.filesystem.user_data.available", '?', {
+    name: 'available',
+    desc: 'available',
+    type: 'number',
+    role: 'number',
+    unit: 'MB',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.filesystem.user_data.used", '?', {
+    name: 'used',
+    desc: 'used',
+    type: 'number',
+    role: 'number',
+    unit: 'MB',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.battery.capacity", '?', {
+    name: 'capacity',
+    desc: 'capacity',
+    type: 'number',
+    role: 'number',
+    unit: '%',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.battery.status", '?', {
+    name: 'status',
+    desc: 'status',
+    type: 'string',
+    role: 'string',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.battery.power_supply", '?', {
+    name: 'power_supply',
+    desc: 'power_supply',
+    type: 'boolean',
+    role: 'boolean',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.network.bt_enabled", '?', {
+    name: 'bt_enabled',
+    desc: 'bt_enabled',
+    type: 'boolean',
+    role: 'boolean',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.network.wifi_enabled", '?', {
+    name: 'wifi_enabled',
+    desc: 'wifi_enabled',
+    type: 'boolean',
+    role: 'boolean',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.network.wake_on_wlan_enabled", '?', {
+    name: 'wake_on_wlan_enabled',
+    desc: 'wake_on_wlan_enabled',
+    type: 'boolean',
+    role: 'boolean',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.network.bt_address", '?', {
+    name: 'bt_address',
+    desc: 'bt_address',
+    type: 'string',
+    role: 'string',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.network.wifi.id", '?', {
+    name: 'id',
+    desc: 'id',
+    type: 'number',
+    role: 'number',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.network.wifi.ssid", '?', {
+    name: 'ssid',
+    desc: 'ssid',
+    type: 'string',
+    role: 'string',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.network.wifi.ssid_hex", '?', {
+    name: 'ssid_hex',
+    desc: 'ssid_hex',
+    type: 'string',
+    role: 'string',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.network.wifi.secured", '?', {
+    name: 'secured',
+    desc: 'secured',
+    type: 'boolean',
+    role: 'boolean',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.network.wifi.signal_level", '?', {
+    name: 'signal_level',
+    desc: 'signal_level',
+    type: 'number',
+    role: 'number',
+    write: false,
+    read: true
+});
+
+createState("javascript.0.Unfolded-Circle.network.wifi.state", '?', {
+    name: 'state',
+    desc: 'state',
+    type: 'string',
+    role: 'string',
+    write: false,
+    read: true
+});
+
+
+//Funktion
+const wiederholungsID = setInterval(meineFunktion, repeat);
+function meineFunktion() {
+    
+httpGet('http://' +IP + '/api/system/power/battery', {  bearerAuth: Bearer }, (err, response) => {
+    if (!err) {
+        const daten = JSON.parse(response.data);
+        setState('javascript.0.Unfolded-Circle.battery.capacity', daten.capacity, true);
+        setState('javascript.0.Unfolded-Circle.battery.status', daten.status, true);
+        setState('javascript.0.Unfolded-Circle.battery.power_supply', daten.power_supply, true);
+    } else {
+        console.error(err);
+    }
+});
+
+httpGet('http://' +IP + '/api/cfg/network', {  bearerAuth: Bearer }, (err, response) => {
+    if (!err) {
+        const daten = JSON.parse(response.data);
+        setState('javascript.0.Unfolded-Circle.network.bt_enabled', daten.bt_enabled, true);
+        setState('javascript.0.Unfolded-Circle.network.wifi_enabled', daten.wifi_enabled, true);
+        setState('javascript.0.Unfolded-Circle.network.wake_on_wlan_enabled', daten.wake_on_wlan.enabled, true);
+        setState('javascript.0.Unfolded-Circle.network.bt_address', daten.bt.address, true);
+    } else {
+        console.error(err);
+    }
+});
+
+httpGet('http://' +IP + '/api/system/wifi/networks', {  bearerAuth: Bearer }, (err, response) => {
+    if (!err) {
+        const daten = JSON.parse(response.data);
+        setState('javascript.0.Unfolded-Circle.network.wifi.id', daten[0].id, true);
+        setState('javascript.0.Unfolded-Circle.network.wifi.ssid', daten[0].ssid, true);
+        setState('javascript.0.Unfolded-Circle.network.wifi.ssid_hex', daten[0].ssid_hex, true);
+        setState('javascript.0.Unfolded-Circle.network.wifi.secured', daten[0].secured, true);
+        setState('javascript.0.Unfolded-Circle.network.wifi.signal_level', daten[0].signal_level, true);
+        setState('javascript.0.Unfolded-Circle.network.wifi.state', daten[0].state, true);
+    } else {
+        console.error(err);
+    }
+});
+
+httpGet('http://' +IP + '/api/pub/version', {  bearerAuth: Bearer }, (err, response) => {
+    if (!err) {
+        const daten = JSON.parse(response.data);
+        setState('javascript.0.Unfolded-Circle.Information.model', daten.model, true);
+        setState('javascript.0.Unfolded-Circle.Information.device_name', daten.device_name, true);
+        setState('javascript.0.Unfolded-Circle.Information.hostname', daten.hostname, true);
+        setState('javascript.0.Unfolded-Circle.Information.address', daten.address, true);
+        setState('javascript.0.Unfolded-Circle.Information.api', daten.api, true);
+        setState('javascript.0.Unfolded-Circle.Information.core', daten.core, true);
+        setState('javascript.0.Unfolded-Circle.Information.ui', daten.ui, true);
+        setState('javascript.0.Unfolded-Circle.Information.os', daten.os, true);
+    } else {
+        console.error(err);
+    }
+});
+
+httpGet('http://' +IP + '/api/system', {  bearerAuth: Bearer }, (err, response) => {
+    if (!err) {
+        const daten = JSON.parse(response.data);
+        setState('javascript.0.Unfolded-Circle.Information.serial_number', daten.serial_number, true);
+        setState('javascript.0.Unfolded-Circle.Information.hw_revision', daten.hw_revision, true);
+        setState('javascript.0.Unfolded-Circle.Information.manufacturing_date', daten.manufacturing_date, true);
+    } else {
+        console.error(err);
+    }
+});
+
+httpGet('http://' +IP + '/api/pub/status', {  bearerAuth: Bearer }, (err, response) => {
+    if (!err) {
+        const daten= JSON.parse(response.data);
+        setState('javascript.0.Unfolded-Circle.Memory.total_memory', Math.ceil(daten.memory.total_memory / 1024**2), true);
+        setState('javascript.0.Unfolded-Circle.Memory.available_memory', Math.ceil(daten.memory.available_memory/1024**2), true);
+        setState('javascript.0.Unfolded-Circle.Memory.used_memory', Math.ceil(daten.memory.used_memory/1024**2), true);
+        setState('javascript.0.Unfolded-Circle.Memory.total_swap', Math.ceil(daten.memory.total_swap/1024**2), true);
+        setState('javascript.0.Unfolded-Circle.Memory.used_swap', Math.ceil(daten.memory.used_swap/1024**2), true);
+        setState('javascript.0.Unfolded-Circle.load_avg.one', daten.load_avg.one, true);
+        setState('javascript.0.Unfolded-Circle.load_avg.five', daten.load_avg.five, true);
+        setState('javascript.0.Unfolded-Circle.load_avg.fifteen', daten.load_avg.fifteen, true);
+        setState('javascript.0.Unfolded-Circle.filesystem.user_data.available', Math.ceil(daten.filesystem.user_data.available/1024**2), true);
+        setState('javascript.0.Unfolded-Circle.filesystem.user_data.used', Math.ceil(daten.filesystem.user_data.used/1024**2), true);
+
+    } else {
+        console.error(err);
+    }
+});
+}
