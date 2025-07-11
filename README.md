@@ -7,8 +7,11 @@ Aktuell ist es nur möglich Informationen wie z.b. Ladezustand, Speicherauslastu
 
 
 Bevor das Script verwendet werden kann, ist es notwendig ein "Bearer Token" auf der Remote zu generieren.
+
 Dazu müsst ihr über einem Webbrowser die folgende Url eingeben: http://"RemoteIP/doc/core-rest/
-Scrollt dann zum Punkt POST /auth/api_keys  Create an API key for the UCR APIs.
+
+Scrollt dann zum Punkt POST /auth/api_keys  Create an API key for the UCR APIs
+
 Ändert das "My integration" z.B. in "IoBroker" und klickt danach auf "Execute"
 
 Anschließend erhaltet ihr in der Ausgabe unter dem Eintrag "api_key" den Bearer token.
